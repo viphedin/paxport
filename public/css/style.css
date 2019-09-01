@@ -1,0 +1,22 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+table.bordered {
+  width: 100%;
+}
+
+table.bordered td, table.bordered th {
+  border: 1px solid gray;
+  padding: 5px;
+  background: #eee;
+}
+
+table.bordered th {
+  background: #fff;
+}
+
+td.right {
+  text-align: right;
+}

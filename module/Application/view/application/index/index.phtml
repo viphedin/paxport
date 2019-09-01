@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Курсы валют</h3>
+            </div>
+            <div class="panel-body">
+                <table class="bordered">
+                <tr>
+                    <th>Дата</th>
+                    <th>Код валюты</th>
+                    <th>Номинал</th>
+                    <th>Курс</th>
+                </tr>
+<?php
+                if (!$rates) {
+?>
+                <tr>
+                    <td colspan="4">Ничего не найдено.</td>
+                </tr>
+<?php
+                }
+
+                foreach ($rates as $row) {
+?>
+                <tr>
+                    <td><?php echo $row['date']; ?></td>
+                    <td><?php echo $row['code']; ?></td>
+                    <td class="right"><?php echo $row['amount']; ?></td>
+                    <td class="right"><?php echo $row['rate']; ?></td>
+                </tr>
+<?php
+                }
+?>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
